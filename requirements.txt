@@ -6,3 +6,4 @@ networkx
 sklearn
 pydotplus
 matplotlib
+pandas
