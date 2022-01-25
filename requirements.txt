@@ -9,7 +9,6 @@ matplotlib
 pandas
 pydot
 graphviz
-itertools
 skipy
 more_itertools
 statistics
