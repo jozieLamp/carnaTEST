@@ -123,6 +123,9 @@ STATIC_URL = 'main/static/'
 STATICFILES_DIRS = [
 ]
 
+
+CSRF_TRUSTED_ORIGINS = ['https://*.herokuapp.com']
+
 # Configure Django App for Heroku.
 import django_on_heroku
 django_on_heroku.settings(locals())
