@@ -2,7 +2,7 @@ django
 gunicorn
 django-heroku
 numpy
-matplotlib
 networkx
 sklearn
 pydotplus
+matplotlib
