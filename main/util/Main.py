@@ -6,8 +6,8 @@ ORGANIZATION: University of Virginia, Charlottesville, VA
 LAST UPDATED: 8/24/2020
 '''
 
-from MVDD import MVDD
-import MVDD_Generator as mvGen
+from ..util import MVDD
+from ..util import MVDD_Generator as mvGen
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt

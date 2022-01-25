@@ -8,7 +8,7 @@ LAST UPDATED: 10/14/2020
 
 import random
 import networkx as nx
-from MVDD import MVDD
+from ..util  import MVDD
 import copy
 from collections import OrderedDict
 from sklearn.tree import DecisionTreeClassifier
@@ -23,7 +23,6 @@ import pydotplus
 import graphviz
 import collections
 from networkx.drawing.nx_pydot import *
-from MVDD import MVDD
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from scipy import interp
