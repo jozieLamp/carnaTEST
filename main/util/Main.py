@@ -21,13 +21,13 @@ def runHemo(paramDict, outcome):
 
     #get outcome
     if outcome == "READMISSION":
-        modelName = 'TreeFiles/Hemo_Readmission'
+        modelName = '..util/TreeFiles/Hemo_Readmission'
     elif outcome == "DEATH":
-        modelName = 'TreeFiles/Hemo_Death'
+        modelName = '..util/TreeFiles/Hemo_Death'
     elif outcome == "REHOSPITALIZATION":
-        modelName = 'TreeFiles/Hemo_Rehosp'
+        modelName = '..util/TreeFiles/Hemo_Rehosp'
     else:
-        modelName = 'TreeFiles/Hemo_AllOutcomes'
+        modelName = '..util/TreeFiles/Hemo_AllOutcomes'
 
     #load model
     mvdd = mvGen.loadMVDDFromFile(modelName)
