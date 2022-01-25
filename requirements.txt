@@ -7,3 +7,4 @@ sklearn
 pydotplus
 matplotlib
 pandas
+pydot
