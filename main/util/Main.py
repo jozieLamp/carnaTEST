@@ -18,16 +18,17 @@ from networkx.drawing.nx_pydot import *
 #Returns a text file location to display the graph, a integer score value and a string phenotype to be displayed
 #Outcome can be "ALL", "DEATH" "REHOSPITALIZATION" "READMISSION" (passed in all caps)
 def runHemo(paramDict, outcome):
+    print("param dict: ",paramDict)
 
     #get outcome
-    if outcome == "READMISSION":
-        modelName = '..util/TreeFiles/Hemo_Readmission'
-    elif outcome == "DEATH":
-        modelName = '..util/TreeFiles/Hemo_Death'
-    elif outcome == "REHOSPITALIZATION":
-        modelName = '..util/TreeFiles/Hemo_Rehosp'
+    if outcome == "readmissino":
+        modelName = 'TreeFiles/Hemo_Readmission'
+    elif outcome == "death":
+        modelName = 'TreeFiles/Hemo_Death'
+    elif outcome == "rehospitalization":
+        modelName = 'TreeFiles/Hemo_Rehosp'
     else:
-        modelName = '..util/TreeFiles/Hemo_AllOutcomes'
+        modelName = 'TreeFiles/Hemo_AllOutcomes'
 
     #load model
     mvdd = mvGen.loadMVDDFromFile(modelName)
