@@ -1,6 +1,7 @@
 django
 gunicorn
 django-heroku
+numpy
 networkx
 sklearn
 pydotplus
