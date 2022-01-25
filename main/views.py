@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .util.calculate import *
+# from .util.calculate import *
+from .util.Main import *
 
 
 # Create your views here.
@@ -43,9 +44,10 @@ def external(request):
 	# results = run([sys.executable, '/Users/jdano/Documents/HemoPheno/HemoPheno4HF/newsite/mysite/main/calculate.py'], shell=False, stdout=PIPE)
 	string = ""
 	score = 0
-	path = "" 
+	path = ""
 
-	string, score, path, outcome = get_results(input, request.POST.get('testparam'))
+	#string, score, path, outcome = get_results(input, request.POST.get('testparam'))
+	string, score, path, outcome = runHemo(input, request.POST.get('testparam'))
 	chance = ""
 	color = ""
 	if score == 1:
@@ -68,4 +70,3 @@ def external(request):
 
 	# print(results)
 	return render(request, "main/results.html", {"score":score, "desc":desc, "path":str(path), "chance":chance, "color":color})
-
