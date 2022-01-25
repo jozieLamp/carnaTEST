@@ -1,6 +1,6 @@
 django
 gunicorn
-django-heroku
+django-on-heroku
 numpy
 networkx
 sklearn
