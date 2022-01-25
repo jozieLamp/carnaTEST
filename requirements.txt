@@ -9,12 +9,8 @@ matplotlib
 pandas
 pydot
 graphviz
-math
-copy
 pickle
 itertools
-re
 skipy
 more_itertools
 statistics
-random
