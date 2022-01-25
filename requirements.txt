@@ -8,3 +8,14 @@ pydotplus
 matplotlib
 pandas
 pydot
+graphviz
+collections
+math
+copy
+pickle
+itertools
+re
+skipy
+more_itertools
+statistics
+random
