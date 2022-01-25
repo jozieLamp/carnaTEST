@@ -9,7 +9,6 @@ matplotlib
 pandas
 pydot
 graphviz
-collections
 math
 copy
 pickle
