@@ -48,7 +48,7 @@ from . import Main
 #         return results
 
 #     return render_template("main/base.html")
-
+"""
 def get_results(data, testparam):
     hemoDict = {'RAP': [0.0, 85.0],
             'PAS': [0.0, 90.0],
@@ -77,7 +77,7 @@ def get_results(data, testparam):
             'PPRatio': [-0.8870967740000001, 9.666666667000001],
             'Age': [23.0, 88.0],
             'EjF': [0.0, 45.0]}
-        
+
     for key in hemoDict:
         hemoDict[key] = data[key.lower()]
 
@@ -106,7 +106,7 @@ def get_results(data, testparam):
 
     # return request.form['pas']
     return stringy, score, path, testparam
-
+"""
 
 # if __name__ == "__main__":
 #     app.run(debug=True)
