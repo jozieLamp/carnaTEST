@@ -53,6 +53,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mysite.urls'
 
+
+MEDIA_ROOT = "C:/Users/srlam/Documents/GitHub/carnaTEST/main/media"
+MEDIA_URL = "media/"
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -122,7 +127,6 @@ USE_TZ = True
 STATIC_URL = 'main/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
 ]
 
 
