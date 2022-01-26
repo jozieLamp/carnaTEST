@@ -54,9 +54,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'mysite.urls'
 
 
-MEDIA_ROOT = "C:/Users/srlam/Documents/GitHub/carnaTEST/main/media"
-MEDIA_URL = "media/"
-
 
 TEMPLATES = [
     {
@@ -124,9 +121,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = 'main/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
+
+]
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
 
