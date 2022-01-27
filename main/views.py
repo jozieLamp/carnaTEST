@@ -46,6 +46,8 @@ def external(request):
 	score = 0
 	path = ""
 
+	print("I STIL WORKY----------------------------------------------------------------------------------------------------------------")
+
 	#string, score, path, outcome = get_results(input, request.POST.get('testparam'))
 	string, score, path, outcome = runHemo(input, request.POST.get('testparam'))
 	chance = ""
@@ -67,6 +69,8 @@ def external(request):
 		color = "red"
 
 	desc = "Given the inputted data, the algorithm has returned a score of " + str(score) + ", which means that the risk level is " + chance + ". This score indicates that the patient has a less than 10% chance of the outcome: " + str(outcome)
+	print("WORKY WORKY WORKY----------------------------------------------------------------------------------------------------------------")
+	print("RENDERING: ",path)
 
 	# print(results)
 	return render(request, "main/results.html", {"score":score, "desc":desc, "path":str(path), "chance":chance, "color":color})

@@ -6,7 +6,7 @@ ORGANIZATION: University of Virginia, Charlottesville, VA
 LAST UPDATED: 8/24/2020
 '''
 
-from ..util import MVDD
+from ..util.MVDD import MVDD
 from ..util import MVDD_Generator as mvGen
 import pandas as pd
 import networkx as nx
@@ -22,16 +22,18 @@ def runHemo(paramDict, outcome):
 
     #get outcome
     if outcome == "readmissino":
-        modelName = '..static/TreeFiles/Hemo_Readmission'
+        modelName = 'TreeFiles/Hemo_Readmission'
     elif outcome == "death":
-        modelName = '/staticfiles/TreeFiles/Hemo_Death'
+        modelName = 'C:/Users/srlam/Documents/GitHub/carnaTEST/staticfiles/TreeFiles/Hemo_Death'
     elif outcome == "rehospitalization":
         modelName = 'TreeFiles/Hemo_Rehosp'
     else:
         modelName = 'TreeFiles/Hemo_AllOutcomes'
 
+    print("CRASHYPOO 1------------------------------------")
     #load model
     mvdd = mvGen.loadMVDDFromFile(modelName)
+    print("CRASHYPOO 2------------------------------------")
 
     #Predict score
     score, path = mvdd.predictScore(paramDict)

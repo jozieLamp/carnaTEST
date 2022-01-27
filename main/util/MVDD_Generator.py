@@ -8,7 +8,7 @@ LAST UPDATED: 10/14/2020
 
 import random
 import networkx as nx
-from ..util  import MVDD
+from ..util.MVDD import MVDD
 import copy
 from collections import OrderedDict
 from sklearn.tree import DecisionTreeClassifier
@@ -537,8 +537,26 @@ def getLeftRightLabels(tokens):
 # Load Saved MVDD model from file
 # INPUT = model name
 # OUTPUT = MVDD data structure
+#def loadMVDDFromFile(modelName):
+    #return pickle.load(open(modelName + '.sav', 'rb'))
+
+#IMPORTANT ADDED PART --> must show pickle where to find the mvdd module
+import pickle
+
+class CustomUnpickler(pickle.Unpickler):
+
+    def find_class(self, module, name):
+        if name == 'MVDD':
+            from ..util.MVDD import MVDD
+            return MVDD
+        return super().find_class(module, name)
+
+
+# Load Saved MVDD model from file
+# INPUT = model name
+# OUTPUT = MVDD data structure
 def loadMVDDFromFile(modelName):
-    return pickle.load(open(modelName + '.sav', 'rb'))
+    return CustomUnpickler(open(modelName + '.sav', 'rb')).load()
 
 # Training for finding best set of model params
 # INPUT = x and y data and params to try
